@@ -11,9 +11,9 @@ def works():
 @app.route('/about.html')
 def about():
     return render_template('about.html')
-@app.route('/contacts.html')
+'''@app.route('/contacts.html')
 def contacts():
-    return render_template('contacts.html')
+    return render_template('contacts.html')'''
 @app.route('/work.html')
 def work():
     return render_template('work.html')
