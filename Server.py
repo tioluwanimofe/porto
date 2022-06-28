@@ -43,9 +43,9 @@ def submit_form():
         try:
             data = request.form.to_dict()
             write_to_csv(data)
-            return redirect('submit.html')
+            return redirect('error.html')
         except:
             return'something went wrong try again'
     else:
-        return redirect('error.html')
+        return redirect('submit.html')
 
