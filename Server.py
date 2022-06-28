@@ -11,9 +11,9 @@ def works():
 @app.route('/about.html')
 def about():
     return render_template('about.html')
-@app.route('/contacts.html')
+@app.route('/contact.html')
 def contacts():
-    return render_template('contacts.html')
+    return render_template('contact.html')
 @app.route('/work.html')
 def work():
     return render_template('work.html')
@@ -35,7 +35,7 @@ def write_to_csv(data):
         message = data['message']
         csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow([email,subject,message])
-
+@app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':
         try:
