@@ -17,6 +17,15 @@ def contacts():
 @app.route('/work.html')
 def work():
     return render_template('work.html')
+@app.route('/work2.html')
+def work2():
+    return render_template('work2.html')
+@app.route('/work3.html')
+def work3():
+    return render_template('work3.html')
+@app.route('/work4.html')
+def work4():
+    return render_template('work4.html')
 @app.route('/<name>')
 def page_identity(name=None):
     return render_template(name)
